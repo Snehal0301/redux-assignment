@@ -1,0 +1,22 @@
+.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  margin-top: 15px;
+}
+.items .item {
+  border: 1px solid rgba(128, 128, 128, 0.523);
+  width: 85%;
+  padding: 10px;
+  border-radius: 5px;
+}
+.items button {
+  width: 13%;
+  height: 40px;
+  background-color: #D8544F;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
