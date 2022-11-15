@@ -8,18 +8,18 @@ const App = () => {
   const dispatch = useDispatch();
 
   const [form, setForm] = useState({
+    id: '',
     name: '',
-    id: ''
   })
 
   const handleForm = (e) => {
     e.preventDefault();
     dispatch(addUser(form))
-    setForm({ name: "", id: '' })
+    setForm({ id: '', name: "" })
   }
 
   const handleChange = (e) => {
-    setForm({ name: e.target.value, id: new Date().getTime().toString() })
+    setForm({ id: new Date().getTime().toString(), name: e.target.value })
   }
 
   return (

@@ -8,13 +8,14 @@ const detailSlice = createSlice({
     name: 'users',
     initialState,
     reducers: {
-        addUser: (state, {payload}) => {
-            state.value.push(payload)
-            // localStorage.setItem('users', JSON.stringify(state.value))
+        addUser: (state, action) => {
+            state.value.push(action.payload)
+            localStorage.setItem('users',JSON.stringify(state.value))
+            
         },
-        removeUser: (state, { payload }) => {
-            state.value = state.value.filter((user) => user.id !== payload.id)
-            // localStorage.setItem('users', JSON.stringify(state.value))
+        removeUser: (state, action) => {
+            state.value = state.value.filter((user) => user.id !== action.payload.id)
+            localStorage.setItem('users',JSON.stringify(state.value))
         }
     }
 })
