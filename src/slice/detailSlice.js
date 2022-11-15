@@ -10,12 +10,9 @@ const detailSlice = createSlice({
     reducers: {
         addUser: (state, action) => {
             state.value.push(action.payload)
-            localStorage.setItem('users',JSON.stringify(state.value))
-            
         },
         removeUser: (state, action) => {
             state.value = state.value.filter((user) => user.id !== action.payload.id)
-            localStorage.setItem('users',JSON.stringify(state.value))
         }
     }
 })
